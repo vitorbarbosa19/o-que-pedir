@@ -1,0 +1,136 @@
+body {
+	margin: 0;
+}
+
+/*-------------------------------------------*/
+/*--------- Styles for Profile Menu ---------*/
+/*-------------------------------------------*/
+
+.profile-menu {
+
+}
+
+.profile-menu-active {
+
+}
+
+/*-------------------------------------------*/
+/*----------- Styles for Dish List ----------*/
+/*-------------------------------------------*/
+
+.dishes-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 15px;
+}
+
+.dishes-container p {
+	margin: 0;
+}
+
+.dish-position p {
+	font-size: 48px;
+}
+
+.dish-short-info {
+	width: 45%;
+	text-align: left;
+	padding-left: 40px;
+}
+
+.dish-short-info-name {
+	font-size: 24px;
+}
+
+.dish-rating img {
+	max-width: 30px;
+}
+
+@media (max-width: 980px) {
+
+	.dish-position {
+		width: 10%;
+	}
+
+	.dish-short-info {
+		width: 70%;
+		padding-left: 30px;
+	}
+
+	.dish-rating {
+		width: 20%;
+	}
+}
+
+@media (max-width: 500px) {
+	
+	.dish-short-info {
+		padding-left: 20px;
+	}
+
+	.dish-short-info-name {
+		font-size: 18px;
+	}
+
+	.dish-short-info-restaurant {
+		font-size: 13px;
+	}
+
+	.dish-position p {
+		font-size: 32px;
+	}
+}
+
+/*-------------------------------------------*/
+/*------------ Styles for Navbar ------------*/
+/*-------------------------------------------*/
+
+.nav-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-bottom: 1px solid #f1f1f1;
+	padding: 10px 0;
+	box-shadow: 0 0 2px #d4d4d4;
+}
+
+.search-bar {
+	width: 50%;
+}
+
+.filter-location,
+.filter-cuisine {
+	text-align: center;
+}
+
+.user-picture img {
+	border-radius: 50%;
+	max-width: 60px;
+	cursor: pointer;
+}
+
+.search-bar input{
+	border: 1px solid #d3d3d3;
+	border-radius: 3px;
+	font-size: 12px;
+	padding: 10px 15px;
+	width: 100%;
+	background: url('https://goo.gl/37hrEg') no-repeat right;
+	background-size: 20px 20px;
+	background-position: right center;
+}
+
+.filter-location img,
+.filter-cuisine img {
+	border-radius: 3px;
+	max-width: 30px;
+}
+
+.filter-location p,
+.filter-cuisine p {
+	margin: 0;
+	font-size: 12px;
+}

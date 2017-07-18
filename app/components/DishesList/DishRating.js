@@ -4,7 +4,7 @@ export default class DishRating extends React.Component {
 	render () {
 		return (
 			<div className='dish-rating'>
-				<img src='https://goo.gl/37hrEg'/>
+				<img src='https://goo.gl/yB9KEW'/>
 			</div>
 		)
 	}

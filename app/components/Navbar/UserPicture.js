@@ -4,7 +4,9 @@ export default class UserPicture extends React.Component {
 	render () {
 		return (
 			<div className='user-picture'>
-				<img src='https://goo.gl/37hrEg'/>
+				<a href='#' onClick={this.props.slideMenuProfile}>
+					<img src='https://goo.gl/yB9KEW'/>
+				</a>
 			</div>
 		)
 	}

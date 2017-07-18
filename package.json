@@ -38,7 +38,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./dist --domain oquepedir.surge.sh"
+      "pre-push": "surge --project ./dist --domain https://oquepedir.surge.sh"
     }
   }
 }

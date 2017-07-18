@@ -2,6 +2,10 @@ body {
 	margin: 0;
 }
 
+ul {
+	list-style: none;
+}
+
 
 /*-------------------------------------------*/
 /*--------- Styles for Add New Dish ---------*/
@@ -90,7 +94,8 @@ body {
 .dish-short-info {
 	width: 45%;
 	text-align: left;
-	padding-left: 40px;
+	padding: 20px 10px;
+	border-bottom: 1px solid #d3d3d3;
 }
 
 .dish-short-info-name {

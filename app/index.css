@@ -2,6 +2,42 @@ body {
 	margin: 0;
 }
 
+
+/*-------------------------------------------*/
+/*--------- Styles for Add New Dish ---------*/
+/*-------------------------------------------*/
+
+.add-new-dish-btn {
+	border-radius: 50%;
+	width: 80px;
+	padding-top: 80px;
+	position: fixed;
+	top: 80%;
+	left: 90%;
+	background-color: #d3d3d3;
+}
+
+@media (max-width: 980px) {
+	.add-new-dish-btn {
+		width: 70px;
+		padding-top: 70px;
+		left: 85%;
+	}	
+}
+
+@media (max-width: 600px) {
+	.add-new-dish-btn {
+		left: 80%;
+	}	
+}
+
+@media (max-width: 400px) {
+	.add-new-dish-btn {
+		top: 85%;
+		left: 75%;
+	}	
+}
+
 /*-------------------------------------------*/
 /*--------- Styles for Profile Menu ---------*/
 /*-------------------------------------------*/
@@ -125,7 +161,7 @@ body {
 
 .user-picture img {
 	border-radius: 50%;
-	max-width: 60px;
+	max-width: 40px;
 	cursor: pointer;
 }
 
@@ -150,4 +186,15 @@ body {
 .filter-cuisine p {
 	margin: 0;
 	font-size: 12px;
+}
+
+@media (max-width: 500px) {
+	.search-bar {
+		width: 40%;
+	}
+
+	.search-bar input {
+		font-size: 10px;
+		padding: 10px;
+	}
 }

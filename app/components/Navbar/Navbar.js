@@ -1,37 +1,40 @@
 import React from 'react'
 //import components
 import ProfileMenu from './ProfileMenu/ProfileMenu'
-import UserPicture from './UserPicture'
+import NavPicture from './NavPicture'
 import SearchBar from './SearchBar'
-import FilterLocation from './FilterLocation'
-import FilterCuisine from './FilterCuisine'
+import FilterLocation from './FilterLocation/FilterLocation'
+import FilterCuisine from './FilterCuisine/FilterCuisine'
 
 export default class Navbar extends React.Component {
 	
 	constructor(props) {
 		super(props)
 		this.state = {
-			profileMenuIsActive: false
+			profileMenuIsOpen: false
 		}
 	}
 
-	handleClick (event) {
+	openMenuProfile (event) {
 		event.preventDefault()
-		this.setState( (prevState) => {
-			return {
-				profileMenuIsActive: !prevState.profileMenuIsActive
-			}
-		})
+		this.setState({ profileMenuIsOpen: true })
+	}
+
+	closeMenuProfile (event) {
+		event.preventDefault()
+		this.setState({ profileMenuIsOpen: false })
 	}
 
 	render () {
 		return (
 			<div className='nav-container'>
 				<ProfileMenu 
-					profileMenuIsActive={this.state.profileMenuIsActive}
-					slideMenuProfile={this.handleClick.bind(this)
-				}/>
-				<UserPicture slideMenuProfile={this.handleClick.bind(this)}/>
+					profileMenuIsOpen={this.state.profileMenuIsOpen}
+					closeMenuProfile={this.closeMenuProfile.bind(this)}
+				/>
+				<NavPicture 
+					openMenuProfile={this.openMenuProfile.bind(this)}
+				/>
 				<SearchBar />
 				<FilterLocation />
 				<FilterCuisine />

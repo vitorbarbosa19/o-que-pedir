@@ -6,8 +6,8 @@ import UserActions from './UserActions'
 export default class ProfileMenu extends React.Component {
 	render () {
 		return (
-			<div className={this.props.profileMenuIsActive ? 'profile-menu-active' : 'profile-menu-inactive'}>
-				<UserInfo slideMenuProfile={this.props.slideMenuProfile}/>
+			<div className={this.props.profileMenuIsOpen ? 'profile-menu-open' : 'profile-menu-closed'}>
+				<UserInfo closeMenuProfile={this.props.closeMenuProfile}/>
 				<UserActions />
 			</div>
 		)

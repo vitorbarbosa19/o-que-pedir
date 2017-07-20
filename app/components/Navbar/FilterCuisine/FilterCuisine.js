@@ -1,4 +1,6 @@
 import React from 'react'
+//import icons
+import { defaultIcon } from '../../../assets/images.js'
 //import components
 import FilterModal from '../FilterModal'
 import FilterFormCuisine from './FilterFormCuisine'
@@ -27,7 +29,7 @@ export default class FilterCuisine extends React.Component {
 		return (
 			<div className='filter-cuisine'>
 				<a href='#' onClick={this.openFilterCuisine.bind(this)}>
-					<img src='https://goo.gl/yB9KEW'/>
+					<img src={defaultIcon}/>
 				</a>
 				<p>Mostrar tudo</p>
 				<FilterModal 

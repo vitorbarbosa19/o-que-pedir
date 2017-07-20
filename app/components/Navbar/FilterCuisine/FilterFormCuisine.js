@@ -16,8 +16,8 @@ const FilterFormCuisine = ({ data: {loading, error, allDishes} }) => {
 	let uniqueListOfRestaurants = arrayOfUniqueValues(allDishes)
 	return (
 		<ul className='filter-container'>
-			{uniqueListOfRestaurants.map( (restaurant) => 
-				<li className='dish-item'>
+			{uniqueListOfRestaurants.map( (restaurant, id) => 
+				<li key={id} className='dish-item'>
 					<p>{restaurant}</p>
 				</li>
 			)}

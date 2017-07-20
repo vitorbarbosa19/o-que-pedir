@@ -39,7 +39,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./dist --domain https://oquepedir.surge.sh"
+      "pre-push": "npm run build && surge --project ./dist --domain https://oquepedir.surge.sh"
     }
   }
 }

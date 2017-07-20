@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import { 
 	ApolloClient, 
-	createNetworkInterface,
+	createBatchingNetworkInterface, //enables batch requests to the server. Improves performance a lot
 	ApolloProvider } from 'react-apollo'
 import App from './components/App'
 
 const client = new ApolloClient({
-	networkInterface: createNetworkInterface({
-		uri: 'https://api.graph.cool/simple/v1/Dishes'
-	})
+	networkInterface: createBatchingNetworkInterface({
+		uri: 'https://api.graph.cool/simple/v1/Dishes',
+		batchInterval: 10
+	}),
+	dataIdFromObject: o => o.id,
+	queryDeduplication: true
 })
 
 ReactDOM.render(

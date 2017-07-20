@@ -17,7 +17,7 @@ const DishesList = ({ data: {loading, error, allDishes} }) => {
 	return (
 		<ul className='dishes-container'>
 			{allDishes.map( (dish) => 
-				<li className='dish-item'>
+				<li key={dish.id} className='dish-item'>
 					<DishPosition />
 					<DishShortInfo name={dish.name} restaurant={dish.restaurant}/>
 					<DishRating />

@@ -4,7 +4,7 @@ const webpack = require('webpack')
 
 const config = {
 	
-	entry: './app/index.js',
+	entry: ['babel-polyfill', './app/index.js'],
 	
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -18,7 +18,10 @@ const config = {
 				test: /\.jsx?$/,
 				loader: 'babel-loader',
 				exclude: /node_modules/,
-				query: { presets: ['env', 'react'] }
+				query: { 
+					plugins: ['transform-async-to-generator'],
+					presets: ['env', 'react', 'stage-0'] 
+				}
 			},
 			{
 				test: /\.css$/,

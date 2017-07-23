@@ -101,12 +101,33 @@ ul {
 	transition: 0.35s ease-in-out;
 }
 
+.filter-item {
+	display: flex;
+	align-items: center;
+	padding: 20px 10px;
+	box-shadow: 0 1px 5px #e3e3e3;
+}
+
+.filter-item label {
+	width: 100%;
+	text-align: left;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+	padding: 10px;
+}
+
 /*-------------------------------------------*/
 /*--------------- Dish List -----------------*/
 /*-------------------------------------------*/
 
 .dishes-container {
 	display: flex;
+	justify-content: start;
 	flex-direction: column;
 }
 
@@ -182,8 +203,7 @@ ul {
 	max-width: 30px;
 }
 
-.filter-location p,
-.filter-cuisine p {
+.filter-selected {
 	margin: 0;
 	font-size: 12px;
 }

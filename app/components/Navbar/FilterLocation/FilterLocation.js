@@ -7,7 +7,7 @@ export default class FilterLocation extends React.Component {
 		return (
 			<div className='filter-location'>
 				<img src={defaultIcon}/>
-				<p>Sao Paulo</p>
+				<div className='filter-selected'>Sao Paulo</div>
 			</div>
 		)
 	}

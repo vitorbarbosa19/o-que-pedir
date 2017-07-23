@@ -2,8 +2,8 @@ import { gql } from 'react-apollo'
 
 const filterCuisineQuery = gql`
 	query FilterCuisineQuery {
-		allDishes(orderBy: restaurant_ASC, first: 10) {
-			restaurant
+		allDishes(orderBy: cuisine_ASC) {
+			cuisine
 		}
 	}
 `

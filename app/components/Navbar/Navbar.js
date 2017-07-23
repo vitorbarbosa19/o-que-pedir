@@ -37,7 +37,13 @@ export default class Navbar extends React.Component {
 				/>
 				<SearchBar />
 				<FilterLocation />
-				<FilterCuisine />
+				<FilterCuisine 
+					userFilterSelectionCuisine={this.props.userFilterSelectionCuisine} 
+					openModalFilterCuisine={this.props.openModalFilterCuisine}
+					closeModalFilterCuisine={this.props.closeModalFilterCuisine}
+					modalFilterCuisineIsOpen={this.props.modalFilterCuisineIsOpen}
+					filterByCuisine={this.props.filterByCuisine}
+				/>
 			</div>
 		)
 	}

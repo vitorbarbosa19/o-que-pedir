@@ -15,12 +15,12 @@ export default class Navbar extends React.Component {
 		}
 	}
 
-	openMenuProfile (event) {
+	openMenuProfile(event) {
 		event.preventDefault()
 		this.setState({ profileMenuIsOpen: true })
 	}
 
-	closeMenuProfile (event) {
+	closeMenuProfile(event) {
 		event.preventDefault()
 		this.setState({ profileMenuIsOpen: false })
 	}
@@ -43,6 +43,7 @@ export default class Navbar extends React.Component {
 					closeModalFilterCuisine={this.props.closeModalFilterCuisine}
 					modalFilterCuisineIsOpen={this.props.modalFilterCuisineIsOpen}
 					filterByCuisine={this.props.filterByCuisine}
+					clearFilter={this.props.clearFilter}
 				/>
 			</div>
 		)

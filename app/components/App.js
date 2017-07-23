@@ -21,6 +21,7 @@ export default class App extends React.Component {
 			filterByLocation: null,
 			filterByCuisine: null,
 			filterCuisineIsSelected: false,
+			redirectPath: null,
 			//control modals open/close states of filters
 			modalFilterCuisineIsOpen: false
 		}
@@ -28,21 +29,40 @@ export default class App extends React.Component {
 		this.userFilterSelectionCuisine = this.userFilterSelectionCuisine.bind(this)	
 		this.openModalFilterCuisine = this.openModalFilterCuisine.bind(this)
 		this.closeModalFilterCuisine = this.closeModalFilterCuisine.bind(this)
+		this.clearFilter = this.clearFilter.bind(this)
 	}
 
-	userFilterSelectionCuisine (event) {
+	userFilterSelectionCuisine(event) {
 		this.setState({
 			filterByCuisine: event.target.value, 
-			modalFilterCuisineIsOpen: false, 
+			modalFilterCuisineIsOpen: false,
+			filterCuisineIsSelected: true
 		})
 	}
 
-	openModalFilterCuisine (event) {
+	clearFilter() {
+		this.setState({
+			modalFilterCuisineIsOpen: false,
+			redirectPath: null,
+			filterByCuisine: null
+		})
+	}
+
+	componentDidUpdate() {
+		if(this.state.filterCuisineIsSelected) {
+			this.setState({ 
+				redirectPath: '/dishes-list-by-cuisine',
+				filterCuisineIsSelected: false
+			})
+		}
+	}
+
+	openModalFilterCuisine(event) {
 		event.preventDefault()
 		this.setState({ modalFilterCuisineIsOpen: true })
 	}
 
-	closeModalFilterCuisine (event) {
+	closeModalFilterCuisine(event) {
 		event.preventDefault()
 		this.setState({ modalFilterCuisineIsOpen: false })
 	}
@@ -50,12 +70,15 @@ export default class App extends React.Component {
 	render () {
 		return (
 			<div>
+			{this.state.redirectPath && <Redirect to={this.state.redirectPath} />}
 				<Navbar
 					userFilterSelectionCuisine={this.userFilterSelectionCuisine} 
 					openModalFilterCuisine={this.openModalFilterCuisine}
 					closeModalFilterCuisine={this.closeModalFilterCuisine}
 					modalFilterCuisineIsOpen={this.state.modalFilterCuisineIsOpen}
 					filterByCuisine={this.state.filterByCuisine}
+					redirectPath={this.state.redirectPath}
+					clearFilter={this.clearFilter}
 				/>
 				<Switch>
 					<Route exact path='/' render={ () =>

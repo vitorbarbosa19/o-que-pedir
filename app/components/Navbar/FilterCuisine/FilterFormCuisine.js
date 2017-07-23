@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { withApollo } from 'react-apollo'
 import arrayOfUniqueValues from '../../../utils/arrayOfUniqueValues'
 //import queries
@@ -27,6 +28,11 @@ class FilterFormCuisine extends React.Component {
 		let uniqueListOfCuisines = arrayOfUniqueValues(this.state.allCuisines)
 		return (
 			<ul className='filter-container' onChange={this.props.userFilterSelectionCuisine} >
+				<li className='filter-item'>
+					<Link className='clear-filter' to='/' onClick={this.props.clearFilter}>
+						Todas
+					</Link>
+				</li>
 				{uniqueListOfCuisines.map( (cuisine, id) => 
 					<li key={id} className='filter-item'>
 							<input type='radio' id={id} name='cuisine' value={cuisine} />

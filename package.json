@@ -21,6 +21,7 @@
   "author": "Vitor Barbosa",
   "license": "ISC",
   "dependencies": {
+    "enhanced-resolve": "^3.4.1",
     "react": "^15.6.1",
     "react-apollo": "^1.4.4",
     "react-dom": "^15.6.1",
@@ -40,7 +41,7 @@
     "prop-types": "^15.5.10",
     "style-loader": "^0.18.2",
     "surge": "^0.19.0",
-    "webpack": "^3.3.0",
+    "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.1"
   },
   "git": {

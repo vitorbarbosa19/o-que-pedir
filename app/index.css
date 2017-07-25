@@ -193,8 +193,9 @@ a {
 	width: 50%;
 }
 
-.filter-location,
-.filter-cuisine {
+.filter-city,
+.filter-cuisine,
+.filter-restaurant {
 	text-align: center;
 }
 
@@ -215,8 +216,9 @@ a {
 	background-position: right center;
 }
 
-.filter-location img,
-.filter-cuisine img {
+.filter-city img,
+.filter-cuisine img,
+.filter-restaurant img {
 	border-radius: 3px;
 	max-width: 30px;
 }

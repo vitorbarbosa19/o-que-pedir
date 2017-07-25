@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
 //import queries
-import dishesListAllQuery from '../../queries/dishesListAllQuery'
+import dishesListQuery from '../../queries/dishesListQuery'
 //import components
 import DishPosition from './DishPosition'
 import DishShortInfo from './DishShortInfo'
 import DishRating from './DishRating'
 
-class DishesListAll extends React.Component {	
+class DishesList extends React.Component {	
 	render () {
 		if (this.props.loading) {
 			return <p>Loading...</p>
@@ -29,10 +29,17 @@ class DishesListAll extends React.Component {
 	}
 }
 
-export default graphql(dishesListAllQuery, {
+export default graphql(dishesListQuery, {
+	options: (props) => ({
+		variables: {
+			filterByCity: props.filterByCity,
+			filterByRestaurant: props.filterByRestaurant,
+			filterByCuisine: props.filterByCuisine
+		}
+	}),
 	props: ({ data: {loading, error, allDishes} }) => ({
 		loading,
 		error,
 		allDishes
 	})
-})(DishesListAll)
+})(DishesList)

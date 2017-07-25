@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { 
 	ApolloClient, 
 	createBatchingNetworkInterface, //enables batch requests to the server. Improves performance a lot
@@ -19,9 +18,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
 	<ApolloProvider client={client}>
-		<Router>
-			<App />
-		</Router>
+		<App />
 	</ApolloProvider>,
 	document.getElementById('app')
 )

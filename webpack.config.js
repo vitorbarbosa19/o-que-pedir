@@ -44,7 +44,21 @@ if (process.env.NODE_ENV === 'production') {
 				'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
 			}
 		}),
-		new webpack.optimize.UglifyJsPlugin()
+		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.ModuleConcatenationPlugin() //as of Webpack 3.0
+		//CONSIDER INCLUDING IN THE FUTURE THE PRODUCTION PLUGINS BELOW:
+		//URL-LOADER 
+		//since app just uses icons and they are very very small, it might make sense to inline them in the bundle, instead of requesting them
+		//https://survivejs.com/webpack/loading/images/
+		//SW-PRECACHE-WEBPACK-PLUGIN
+		//https://www.npmjs.com/package/sw-precache-webpack-plugin
+		//SOURCE-MAP-EXPLORER
+		//https://www.npmjs.com/package/source-map-explorer
+		//COMPRESSION-WEBPACK-PLUGIN
+		//Note that most hosts will already gzip compress your files before serving to the client
+		//https://www.npmjs.com/package/compression-webpack-plugin
+		//ADVANCED
+		//For more advanced plugin configurations, check: https://github.com/petehunt/webpack-howto
 	)
 }
 

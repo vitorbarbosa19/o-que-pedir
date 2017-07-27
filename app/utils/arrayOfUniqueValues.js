@@ -8,14 +8,14 @@ const arrayOfUniqueValues = (arrayOfObjects) => {
 	let cuisinesArray = []
 	
 	for (let singleObject of arrayOfObjects) {
-		restaurantsArray.push(Object.values(singleObject)[0])
-		citiesArray.push(Object.values(singleObject)[1])
-		cuisinesArray.push(Object.values(singleObject)[2])
+		restaurantsArray.push(Object.values(singleObject)[2])
+		citiesArray.push(Object.values(singleObject)[3])
+		cuisinesArray.push(Object.values(singleObject)[4])
 	}
 	
-	restaurantsArray = removeDuplicates(restaurantsArray)
-	citiesArray = removeDuplicates(citiesArray)
-	cuisinesArray = removeDuplicates(cuisinesArray)
+	restaurantsArray = removeDuplicates(restaurantsArray).sort()
+	citiesArray = removeDuplicates(citiesArray).sort()
+	cuisinesArray = removeDuplicates(cuisinesArray).sort()
 	
 	return [restaurantsArray, citiesArray, cuisinesArray]
 }

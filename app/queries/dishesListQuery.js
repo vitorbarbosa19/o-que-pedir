@@ -6,7 +6,7 @@ const dishesListQuery = gql`
 		$filterByCity: [String!], 
 		$filterByCuisine: [String!]
 	) {
-			allDishes(orderBy: rating_DESC, first: 30, filter: {
+			allDishes(orderBy: rating_DESC, filter: {
 				AND: [
 					{restaurant_in: $filterByRestaurant},
 					{city_in: $filterByCity},
@@ -16,6 +16,8 @@ const dishesListQuery = gql`
 				id
 				name
 				restaurant
+				city
+				cuisine
 				rating
 		}
 	}

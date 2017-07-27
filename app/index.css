@@ -2,6 +2,10 @@ body {
 	margin: 0;
 }
 
+.noscroll {
+	overflow: hidden;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -189,31 +193,23 @@ a {
 	box-shadow: 0 0 2px #d4d4d4;
 }
 
-.search-bar {
-	width: 50%;
-}
-
 .filter-city,
 .filter-cuisine,
 .filter-restaurant {
 	text-align: center;
 }
 
+.nav-picture {
+	position: fixed;
+	top: 50%;
+	left: 0%;
+	z-index: 1;
+}
+
 .nav-picture img {
 	border-radius: 50%;
 	max-width: 40px;
 	cursor: pointer;
-}
-
-.search-bar input{
-	border: 1px solid #d3d3d3;
-	border-radius: 3px;
-	font-size: 12px;
-	padding: 10px 15px;
-	width: 100%;
-	background: url('https://res.cloudinary.com/dk1slegqi/image/upload/v1478899861/FCC%20Projects/small-106px_wuiw5w.png') no-repeat right;
-	background-size: 20px 20px;
-	background-position: right center;
 }
 
 .filter-city img,
@@ -225,16 +221,9 @@ a {
 
 .filter-selected {
 	margin: 0;
-	font-size: 12px;
-}
-
-@media (max-width: 500px) {
-	.search-bar {
-		width: 40%;
-	}
-
-	.search-bar input {
-		font-size: 10px;
-		padding: 10px;
-	}
+	font-size: 11px;
+	width: 105px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

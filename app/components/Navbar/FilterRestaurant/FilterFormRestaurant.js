@@ -7,8 +7,8 @@ export default class FilterFormRestaurant extends React.Component {
 		return (
 			<ul className='filter-container' onChange={this.props.userFilterSelectionRestaurant} >
 				<li className='filter-item'>
-					<input type='radio' id='Todas' name='restaurant' value='Todas' />
-					<label htmlFor='Todas'>Todas</label>
+					<input type='radio' id='Todos' name='restaurant' value='Todos' />
+					<label htmlFor='Todos'>Todos</label>
 				</li>
 				{this.props.allRestaurants.map( (restaurant, id) => 
 					<li key={id} className='filter-item'>

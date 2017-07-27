@@ -14,7 +14,7 @@ export default class FilterCuisine extends React.Component {
 					<img src={defaultIcon}/>
 				</a>
 				<div className='filter-selected'>
-					{ typeof this.props.filterByCuisine === 'object' ? 'Todas' : this.props.filterByCuisine }
+					{ typeof this.props.filterByCuisine === 'object' ? 'Todas as cozinhas' : this.props.filterByCuisine }
 				</div>
 				<FilterModal
 					className={this.props.modalFilterCuisineIsOpen ? 'filter-modal-open' : 'filter-modal-closed'}>

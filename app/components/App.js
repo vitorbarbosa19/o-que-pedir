@@ -5,7 +5,6 @@ import dishesListQuery from '../queries/dishesListQuery'
 //import components
 import Navbar from './Navbar/Navbar'
 import DishesList from './DishesList/index'
-import AddNewDish from './AddNewDish'
 import Spinner from '../assets/Spinner'
 //import utils
 import arrayOfUniqueValues from '../utils/arrayOfUniqueValues'
@@ -399,7 +398,6 @@ class App extends React.Component {
 					<Spinner /> :
 					<DishesList allDishes={this.state.listOfDishes} />
 				}
-				<AddNewDish />
 			</div>
 		)
 	}

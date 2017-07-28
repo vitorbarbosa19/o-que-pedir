@@ -13,8 +13,9 @@ export default class FilterRestaurant extends React.Component {
 				<a href='#' onClick={this.props.openModalFilterRestaurant}>
 					<RestaurantIcon />
 				</a>
+				<p className='filter-name'>Restaurante</p>
 				<div className='filter-selected'>
-					{ typeof this.props.filterByRestaurant === 'object' ? 'Todos os restaurantes' : this.props.filterByRestaurant }
+					{ typeof this.props.filterByRestaurant === 'object' ? 'Todos' : this.props.filterByRestaurant }
 				</div>
 				<FilterModal
 					className={this.props.modalFilterRestaurantIsOpen ? 'filter-modal-open' : 'filter-modal-closed'}>

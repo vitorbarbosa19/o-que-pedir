@@ -1,9 +1,11 @@
 import React from 'react'
+//import components
+import Spinner from '../../../assets/Spinner'
 
 export default class FilterFormRestaurant extends React.Component {	
 	render () {
 		if (this.props.allRestaurants === null)
-			return <p>Loading...</p>
+			return <Spinner />
 		return (
 			<ul className='filter-container' onChange={this.props.userFilterSelectionRestaurant} >
 				<li className='filter-item'>

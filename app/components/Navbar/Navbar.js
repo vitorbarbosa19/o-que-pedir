@@ -5,6 +5,7 @@ import MenuIcon from '../../assets/MenuIcon'
 import FilterRestaurant from './FilterRestaurant/index'
 import FilterCity from './FilterCity/index'
 import FilterCuisine from './FilterCuisine/index'
+import AddNewDish from './AddNewDish'
 
 export default class Navbar extends React.Component {
 	
@@ -59,6 +60,7 @@ export default class Navbar extends React.Component {
 					filterByCuisine={this.props.filterByCuisine}
 					allCuisines={this.props.allCuisines}
 				/>
+				<AddNewDish />
 			</div>
 		)
 	}

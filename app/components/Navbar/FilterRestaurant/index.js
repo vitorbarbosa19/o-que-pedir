@@ -1,6 +1,6 @@
 import React from 'react'
 //import icons
-import { defaultIcon } from '../../../assets/images.js'
+import RestaurantIcon from '../../../assets/RestaurantIcon'
 //import components
 import FilterModal from '../FilterModal'
 import FilterFormRestaurant from './FilterFormRestaurant'
@@ -11,7 +11,7 @@ export default class FilterRestaurant extends React.Component {
 		return (
 			<div className='filter-restaurant'>
 				<a href='#' onClick={this.props.openModalFilterRestaurant}>
-					<img src={defaultIcon}/>
+					<RestaurantIcon />
 				</a>
 				<div className='filter-selected'>
 					{ typeof this.props.filterByRestaurant === 'object' ? 'Todos os restaurantes' : this.props.filterByRestaurant }

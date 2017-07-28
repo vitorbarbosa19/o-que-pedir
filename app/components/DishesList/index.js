@@ -8,11 +8,11 @@ export default class DishesList extends React.Component {
 	render () {
 		return (
 			<ul className='dishes-container'>
-				{this.props.allDishes.map( (dish) => 
+				{this.props.allDishes.map( (dish, id) => 
 					<li key={dish.id} className='dish-item'>
-						<DishPosition />
+						<DishPosition position={id} />
 						<DishShortInfo name={dish.name} restaurant={dish.restaurant}/>
-						<DishRating />
+						<DishRating rating={dish.rating} />
 					</li>
 				)}
 			</ul>

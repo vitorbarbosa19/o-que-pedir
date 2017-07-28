@@ -1,11 +1,13 @@
 import React from 'react'
-//import icons
-import { defaultIcon } from '../../assets/images.js'
+//import components
+import StarsIcon from '../../assets/StarsIcon'
 
 export default class DishRating extends React.Component {
 	render () {
 		return (
-			<img className='dish-rating' src={defaultIcon} />
+			<div className='dish-rating'>
+				<StarsIcon rating={this.props.rating} />
+			</div>
 		)
 	}
 }

@@ -6,6 +6,7 @@ import dishesListQuery from '../queries/dishesListQuery'
 import Navbar from './Navbar/Navbar'
 import DishesList from './DishesList/index'
 import AddNewDish from './AddNewDish'
+import Spinner from '../assets/Spinner'
 //import utils
 import arrayOfUniqueValues from '../utils/arrayOfUniqueValues'
 
@@ -395,7 +396,7 @@ class App extends React.Component {
 					allCuisines={this.state.filterListOfCuisines}
 				/>
 				{this.state.loading ? 
-					<p>Carregando pratos...</p> :
+					<Spinner /> :
 					<DishesList allDishes={this.state.listOfDishes} />
 				}
 				<AddNewDish />

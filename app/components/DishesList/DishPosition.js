@@ -4,7 +4,7 @@ export default class DishPosition extends React.Component {
 	render () {
 		return (
 			<p className='dish-position'>
-				01
+				{this.props.position + 1}
 			</p>
 		)
 	}

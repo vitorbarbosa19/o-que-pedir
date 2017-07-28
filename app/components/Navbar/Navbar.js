@@ -1,7 +1,7 @@
 import React from 'react'
 //import components
 import ProfileMenu from './ProfileMenu/ProfileMenu'
-import NavPicture from './NavPicture'
+import MenuIcon from '../../assets/MenuIcon'
 import FilterRestaurant from './FilterRestaurant/index'
 import FilterCity from './FilterCity/index'
 import FilterCuisine from './FilterCuisine/index'
@@ -32,7 +32,7 @@ export default class Navbar extends React.Component {
 					profileMenuIsOpen={this.state.profileMenuIsOpen}
 					closeMenuProfile={this.closeMenuProfile.bind(this)}
 				/>
-				<NavPicture 
+				<MenuIcon 
 					openMenuProfile={this.openMenuProfile.bind(this)}
 				/>
 				<FilterRestaurant

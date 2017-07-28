@@ -1,6 +1,6 @@
 import React from 'react'
 //import icons
-import { defaultIcon } from '../../../assets/images.js'
+import CityIcon from '../../../assets/CityIcon'
 //import components
 import FilterModal from '../FilterModal'
 import FilterFormCity from './FilterFormCity'
@@ -11,7 +11,7 @@ export default class FilterCity extends React.Component {
 		return (
 			<div className='filter-city'>
 				<a href='#' onClick={this.props.openModalFilterCity}>
-					<img src={defaultIcon}/>
+					<CityIcon />
 				</a>
 				<div className='filter-selected'>
 					{ typeof this.props.filterByCity === 'object' ? 'Todas as cidades' : this.props.filterByCity }

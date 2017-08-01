@@ -5,7 +5,9 @@ import PlusIcon from '../../assets/PlusIcon'
 export default class AddNewDish extends React.Component {
 	render () {
 		return (
-			<PlusIcon />
+			<a href='#'>
+				<PlusIcon />
+			</a>
 		)
 	}
 }

@@ -4,7 +4,7 @@ export default class PlusIcon extends React.Component {
   render () {
     return (
       <div className='add-new-dish-btn'>
-        <svg width={'88px'} height={'88px'} viewBox={'0 0 88 88'}>
+        <svg width={'55px'} height={'55px'} viewBox={'0 0 88 88'}>
           <defs>
             <filter x={'-8.8%'} y={'-6.2%'} width={'117.5%'} height={'117.5%'} filterUnits={'objectBoundingBox'} id={'filter-1'}>
               <feOffset dx={'0'} dy={'2'} in={'SourceAlpha'} result={'shadowOffsetOuter1'}></feOffset>

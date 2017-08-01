@@ -12,11 +12,11 @@ export default class FilterCity extends React.Component {
 			<div className='filter-city'>
 				<a href='#' onClick={this.props.openModalFilterCity}>
 					<CityIcon />
+					{ null && <p className='filter-name'>Cidade</p>}
+					<div className='filter-selected'>
+						{ typeof this.props.filterByCity === 'object' ? 'Todas' : this.props.filterByCity }
+					</div>
 				</a>
-				<p className='filter-name'>Cidade</p>
-				<div className='filter-selected'>
-					{ typeof this.props.filterByCity === 'object' ? 'Todas' : this.props.filterByCity }
-				</div>
 				<FilterModal
 					className={this.props.modalFilterCityIsOpen ? 'filter-modal-open' : 'filter-modal-closed'}>
 						<ModalHeader filterName='cidade' closeModal={this.props.closeModalFilterCity} />

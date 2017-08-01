@@ -1,10 +1,9 @@
 import React from 'react'
 
-const UserActions = () => (
+const UserActions = (props) => (
 	<div className='user-actions-container'>
-		<p>Favoritos</p>
 		<p>Adicionar prato</p>
-		<p>Log Out</p>
+		<p onClick={props.logout}>Log Out</p>
 	</div>
 )
 

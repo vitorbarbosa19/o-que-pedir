@@ -12,11 +12,11 @@ export default class FilterRestaurant extends React.Component {
 			<div className='filter-restaurant'>
 				<a href='#' onClick={this.props.openModalFilterRestaurant}>
 					<RestaurantIcon />
+					{ null && <p className='filter-name'>Restaurante</p>}
+					<div className='filter-selected'>
+						{ typeof this.props.filterByRestaurant === 'object' ? 'Todos' : this.props.filterByRestaurant }
+					</div>
 				</a>
-				<p className='filter-name'>Restaurante</p>
-				<div className='filter-selected'>
-					{ typeof this.props.filterByRestaurant === 'object' ? 'Todos' : this.props.filterByRestaurant }
-				</div>
 				<FilterModal
 					className={this.props.modalFilterRestaurantIsOpen ? 'filter-modal-open' : 'filter-modal-closed'}>
 						<ModalHeader filterName='restaurante' closeModal={this.props.closeModalFilterRestaurant} />

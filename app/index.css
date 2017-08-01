@@ -24,30 +24,47 @@ a {
 
 .add-new-dish-btn {
 	position: fixed;
-	top: 85%;
-	left: 90%;
+	right: 50px;
+	bottom: 50px;
 	z-index: 1;
-}
-
-@media (max-width: 980px) {
-	.add-new-dish-btn {
-		top: 87%;
-		left: 87%;
-	}	
-}
-
-@media (max-width: 600px) {
-	.add-new-dish-btn {
-		top: 85%;
-		left: 77%;
-	}	
 }
 
 @media (max-width: 400px) {
 	.add-new-dish-btn {
-		top: 83%;
-		left: 72%;
+		right: 20px;
+		bottom: 20px;
 	}	
+}
+
+/*-------------------------------------------*/
+/*-------------- Welcome Screen -------------*/
+/*-------------------------------------------*/
+
+.welcome-container {
+	padding: 30px;
+}
+
+.welcome-header {
+	font-size: 18px;
+	font-weight: bold; 
+}
+
+.welcome-text {
+	padding: 5px 0 40px 0;
+}
+
+.welcome-text p {
+	text-align: justify;
+}
+
+.login-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 30px;
+	height: 40px;
+	background-color: #566270;
+	color: #fff;
 }
 
 /*-------------------------------------------*/
@@ -56,8 +73,9 @@ a {
 
 .profile-menu-closed {
 	position: fixed;
-	left: -300px;
-	transition: 0.4s ease;
+	top: 0px;
+	left: -600px;
+	transition: 0.2s ease;
 }
 
 .profile-menu-open {
@@ -151,6 +169,8 @@ a {
 }
 
 .close-btn {
+	display: block;
+	width: 100%;
 	margin: 0;
 	text-align: right;
 	font-size: 21px;
@@ -244,7 +264,7 @@ a {
 	align-items: center;
 	justify-content: space-around;
 	border-bottom: 1px solid #f1f1f1;
-	padding: 20px 0;
+	padding: 12px 0;
 	box-shadow: 0 1px 7px rgba(0,0,0,0.5);
 }
 
@@ -278,5 +298,9 @@ a {
 }
 
 .filter-selected {
-	margin-top: 7px;
+	margin-top: 5px;
+}
+
+.menu-btn {
+	width: 20px;
 }

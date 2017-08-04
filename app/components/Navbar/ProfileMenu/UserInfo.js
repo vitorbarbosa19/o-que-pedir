@@ -6,7 +6,7 @@ export default class UserInfo extends React.Component {
 	render () {
 		return (
 			<div className='user-info-container'>
-				<p className='close-btn' onClick={this.props.closeMenuProfile}> X </p>
+				<p className='close-btn' onClick={this.props.closeMenuAndModal}> X </p>
 				<ProfilePicture userPicture={this.props.userPicture} />
 				<p>{this.props.userName}</p>
 			</div>

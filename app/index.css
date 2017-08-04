@@ -17,10 +17,109 @@ a {
 	text-decoration: inherit;
 }
 
-
 /*-------------------------------------------*/
 /*--------------- Add New Dish --------------*/
 /*-------------------------------------------*/
+
+.new-dish-modal-closed {
+	position: fixed;
+	top: 0;
+	right: -1000px;
+	transition: 0.2s ease;
+}
+
+.new-dish-modal-open {
+	overflow: scroll;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	max-width: 400px;
+	height: 100vh;
+	background-color: #fff;
+	transition: 0.4s ease-in-out;
+}
+
+.new-dish-container {
+	padding: 15px 35px 30px;
+}
+
+.new-dish-title {
+	font-size: 16px;
+	margin: 10px 0; 
+	text-align: left;
+}
+
+.new-dish-label {
+	font-size: 16px;
+	margin-top: 30px;
+}
+
+.new-dish-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.new-dish-input {
+	font-size: 13px;
+	background-color: #f5f5f5; 
+	border-radius: 3px;
+	border: none;
+	height: 25px;
+	padding: 10px;
+}
+
+.new-dish-textarea {
+	font-size: 13px;
+	background-color: #f5f5f5; 
+	border-radius: 3px;
+	border: none;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.star-rating-form {
+	display: flex;
+	justify-content: space-around;
+}
+
+.star-radio-option {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.new-dish-rating-star-container {
+ 	display: flex;
+}
+
+.star-radio-option p {
+	font-size: 14px;
+}
+
+.submit-new-dish-btn {
+	padding: 0;
+	border: none;
+	border-radius: 30px;
+	width: 100%;
+	height: 40px;
+	font-size: 14px;
+	background-color: #566270;
+	color: #fff;
+}
+
+.submit-new-dish-btn-disabled {
+	padding: 0;
+	border: none;
+	border-radius: 30px;
+	width: 100%;
+	height: 40px;
+	font-size: 14px;
+	background-color: #efefef;
+	color: #b3b3b3;	
+}
 
 .add-new-dish-btn {
 	position: fixed;
@@ -74,7 +173,7 @@ a {
 .profile-menu-closed {
 	position: fixed;
 	top: 0px;
-	left: -600px;
+	left: -1000px;
 	transition: 0.2s ease;
 }
 

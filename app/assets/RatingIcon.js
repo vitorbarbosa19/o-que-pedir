@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Stars extends React.Component {
+export default class RatingIcon extends React.Component {
 	render () {
 		return (
 			<div className='stars-container'>

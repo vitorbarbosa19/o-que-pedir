@@ -3,7 +3,7 @@ export const AUTH_CONFIG = {
 	clientId: '9943QpHJIN71HuMaHV0urTqChoK3Vn25',
 	callbackUrl: 'http://localhost:8080',
 	options: {
-		allowedConnections: ['facebook'],
+		allowedConnections: ['facebook', 'google-oauth2', 'twitter'],
 		languageDictionary: {
 			title: 'Login O Que Pedir?'
 		}

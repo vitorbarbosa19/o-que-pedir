@@ -4,7 +4,7 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <div className='welcome-container'>
-        <p className='close-btn' onClick={this.props.closeMenuProfile}> X </p>
+        <p className='close-btn' onClick={this.props.closeMenuAndModal}> X </p>
         <p className='welcome-header'>O Que Pedir?</p>
         <div className='welcome-text'>
         	<p>

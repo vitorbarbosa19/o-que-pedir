@@ -3,6 +3,8 @@ import { graphql } from 'react-apollo'
 import AlertContainer from 'react-alert'
 //import queries
 import newDish from '../../queries/newDishMutation'
+//import utils
+import typesOfCuisines from '../../utils/typesOfCuisines'
 //import components
 import Welcome from './Welcome'
 import StarIcon from '../../assets/StarIcon'
@@ -47,7 +49,8 @@ class AddNewDishModal extends React.Component {
 				this.setState({ dish: event.target.value })
 				break
 			case 'cuisine':
-				this.setState({ cuisine: event.target.value })
+				if(event.target.value !== 'Tipo de cozinha')
+					this.setState({ cuisine: event.target.value })
 				break
 			case 'comment':
 				this.setState({ comment: event.target.value })
@@ -130,7 +133,12 @@ class AddNewDishModal extends React.Component {
 							<p className='new-dish-label'>2. Prato</p>
 							<input className='new-dish-input' type='text' name='restaurant' value={this.state.restaurant} placeholder='Restaurante' /> <br />
 							<input className='new-dish-input' type='text' name='dish' value={this.state.dish} placeholder='Nome do prato' /> <br />
-							<input className='new-dish-input' type='text' name='cuisine' value={this.state.cuisine} placeholder='Tipo de cozinha' /> <br />
+							<select className='new-dish-input-cuisine' name='cuisine' value={this.state.cuisine}>
+								<option>Tipo de cozinha</option>
+								{typesOfCuisines.map( (cuisine, id) => {
+									return <option key={id} value={cuisine}>{cuisine}</option>
+								})}
+							</select>
 							<p className='new-dish-label'>3. Avaliação</p>
 							<ul className='star-rating-form' onChange={this.newDishRadioChange}>
 								<li className='star-radio-option'>
@@ -176,7 +184,7 @@ class AddNewDishModal extends React.Component {
 							ref={a => this.msg = a} { 
 								...{
 									offset: 21,
-									position: 'top left',
+									position: 'bottom left',
 									theme: 'light',
 									time: 3000,
 									type: 'success',

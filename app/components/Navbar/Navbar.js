@@ -77,7 +77,8 @@ class Navbar extends React.Component {
 	  	//else create new user and redirect
 	  	else {
 				const variables = {
-		      idToken: localStorage.getItem('id_token')
+		      idToken: localStorage.getItem('id_token'),
+		      username: localStorage.getItem('name')
 		    }
 		    this.props.createUserQuery({ variables })
 		      .then((response) => {

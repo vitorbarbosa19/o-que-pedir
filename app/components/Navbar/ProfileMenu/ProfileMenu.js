@@ -5,6 +5,27 @@ import UserActions from './UserActions'
 import Welcome from '../Welcome'
 
 export default class ProfileMenu extends React.Component {
+ 	constructor(props) {
+ 		super(props)
+ 		this.state = {
+ 			goToHelp: false
+ 		}
+ 		this.goToHelpLink = this.goToHelpLink.bind(this)
+ 		this.backFromHelpLink = this.backFromHelpLink.bind(this)
+ 	}
+
+ 	goToHelpLink() {
+ 		this.setState({
+ 			goToHelp: true
+ 		})
+ 	}
+
+ 	backFromHelpLink() {
+ 		this.setState({
+ 			goToHelp: false
+ 		})
+ 	}
+
  	render () {
 		return (
 			<div className={this.props.profileMenuIsOpen ? 'profile-menu-open' : 'profile-menu-closed'}>
@@ -15,7 +36,12 @@ export default class ProfileMenu extends React.Component {
 							userPicture={this.props.userPicture}
 							closeMenuAndModal={this.props.closeMenuAndModal}
 						/>
-						<UserActions logout={this.props.logout} />
+						<UserActions 
+							goToHelpLink={this.goToHelpLink}
+							backFromHelpLink={this.backFromHelpLink}
+							help={this.state.goToHelp}
+							logout={this.props.logout}
+						/>
 					</div>
 					:
 					<Welcome 
